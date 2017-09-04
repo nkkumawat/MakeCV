@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+<form action="/pdf" method="post">
+	<h1>Personal</h1><br>
+	<input type="text" name="name" placeholder="Name" id="name" > <br>
+	<input type="text" name="address" placeholder="Address" id="address">
+	<input type="text" name="mobile" placeholder="Mobile" id="mobile"> <br>
+	<input type="text" name="website" placeholder="Website" id="website"> <br>
+	<input type="email" name="email" placeholder="Email" id="email"> <br>
+	<input type="text" name="link" placeholder="Social Link" id="link"><br>
+
+	<h1 id="exprience"> Exprience </h1>
+	<input type="text" name="companyname" placeholder="Company Name"><br>
+	<input type="text" name="descriptionexperience"   placeholder="Description Experience"><br>
+    <br><a id="addExp">Add</a><br>
+
+    <h1 id="education"> Education </h1>
+    <input type="text" name="institutename" placeholder="Institute Name"><br>
+    <input type="text" name="edudesc"   placeholder="Description"><br>
+    <br><a id="addEdu">Add</a><br>
+
+    <h1 id="project"> Projects </h1>
+    <input type="text" name="projectname" placeholder="Project Name"><br>
+    <input type="text" name="descriptionproject" placeholder="Description Project"><br>
+    <br><a id="addPro">Add</a><br>
+    <br>
+
+    <input type="submit" name="" id="send">
+
+
+
+</form>
+</body>
+<script type="text/javascript" src="/javascripts/jquery.min.js" ></script>
+<script type="text/javascript" >
+
+    const exprience = $('#exprience');
+    const project = $('#project');
+    const education = $('#education');
+
+    $('#addExp').click(function () {
+        exprience.append("<br><input type='text' name='companyname' placeholder='Company Name'><br> <input type='text' name='descriptionexperience' class='descriptionexperience' placeholder='Description Experience'>");
+    });
+
+    $('#addPro').click(function () {
+        project.append('<br><input type="text" name="projectname" placeholder="Project Name"><br> <input type="text" name="descriptionproject" placeholder="Description Project"><br>');
+    });
+    $('#addEdu').click(function () {
+        education.append('<br><input type="text" name="projectname" placeholder="Project Name"><br><input type="text" name="descriptionproject" placeholder="Description Project"><br>');
+    });
+
+</script>
+
+</html>
