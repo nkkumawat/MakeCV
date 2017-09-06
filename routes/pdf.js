@@ -12,8 +12,11 @@ router.post('/', function(req, res) {
     const Link = req.body.link;
     const CompanyName = req.body.companyname;
     const ExprienceDesc = req.body.descriptionexperience;
+    // const Education
     const ProjectName = req.body.projectname;
     const ProjectDesc = req.body.descriptionproject;
+    const Skills = req.body.skill;
+    const Languages = req.body.lang;
 
     // console.log("Narendra Kumawat" + arr.length);
     let filename = Name;
@@ -26,30 +29,34 @@ router.post('/', function(req, res) {
     doc.fillColor('#33ccff');
     doc.font('public/fonts/timeburnerbold.ttf');
     doc.text("\nSkills\n\n" , 430 , 100);
-    for(i = 0; i < 3 ; i ++) {
-        doc.fontSize(10);
-        doc.fillColor('#000000');
-        doc.font('public/fonts/timeburnernormal.ttf');
-        doc.text("C​, C++​ , Data​  Structure​ , ​Algorithms​ ,Android​,Html​\n\n", 430);
+    doc.fontSize(10);
+    doc.fillColor('#000000');
+    doc.font('public/fonts/timeburnernormal.ttf');
+    for(i = 0; i < Skills.length ; i ++) {
+        if(Skills[i] !== '') {
+            doc.text(Skills[i] + "​\n\n", 430);
+        }
     }
     doc.fontSize(15);
     doc.fillColor('#33ccff');
     doc.font('public/fonts/timeburnerbold.ttf');
     doc.text("\nResponsibilities\n\n" , 430 );
-    for(i = 0; i < 3 ; i ++) {
-        doc.fontSize(10);
-        doc.fillColor('#000000');
-        doc.font('public/fonts/timeburnernormal.ttf');
-        doc.text("C​, C++​ , Data​  Structure​ , ​Algorithms​ ,Android​,Html​\n\n", 430);
+    doc.fontSize(10);
+    doc.fillColor('#000000');
+    doc.font('public/fonts/timeburnernormal.ttf');
+    for(i = 0; i < Languages.length ; i ++) {
+        if(Languages[i] !== '') {
+            doc.text( Languages[i] + "​\n\n", 430);
+        }
     }
     doc.fontSize(15);
     doc.fillColor('#33ccff');
     doc.font('public/fonts/timeburnerbold.ttf');
+    doc.fontSize(10);
+    doc.fillColor('#000000');
+    doc.font('public/fonts/timeburnernormal.ttf');
     doc.text("\nLanguage\n\n" , 430 );
     for(i = 0; i < 3 ; i ++) {
-        doc.fontSize(10);
-        doc.fillColor('#000000');
-        doc.font('public/fonts/timeburnernormal.ttf');
         doc.text("Hindi , English​\n\n", 430);
     }
     doc.fontSize(18);//  font size

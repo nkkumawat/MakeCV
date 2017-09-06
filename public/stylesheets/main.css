@@ -1,3 +1,16 @@
+body{
+    text-align: left;
+    padding-left: 10%;
+}
 a {
     cursor: pointer;
+}
+input {
+    padding: 5px;
+    /*font-size: 150%;*/
+    margin-top: 10px;
+    width: 50%;
+}
+h1 , a{
+    font-family: sans-serif;
 }
