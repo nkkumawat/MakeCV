@@ -16,7 +16,7 @@
 
 	<h1 id="exprience"> Exprience </h1>
 	<input type="text" name="companyname" placeholder="Company Name"><br>
-	<input type="text" name="descriptionexperience"   placeholder="Description Experience"><br>
+	<input type="text" name="descriptionexperience"  placeholder="Description Experience"><br>
     <br><a id="addExp">Add</a><br>
 
     <h1 id="education"> Education </h1>
@@ -38,9 +38,11 @@
     <input type="text" name="lang" placeholder="Languages Known"><br>
     <br><a id="addLang">Add</a><br>
 
+    <h1 id="resp"> Responsiblities </h1>
+    <input type="text" name="resp" placeholder="Responsiblities"><br>
+    <br><a id="addRes">Add</a><br>
+
     <input type="submit" name="" value="Create" id="send">
-
-
 
 </form>
 </body>
@@ -51,7 +53,8 @@
     const project = $('#project');
     const education = $('#education');
     const skills = $('#skills');
-
+    const lang = $('#lang');
+    const resp = $('#resp');
     $('#addExp').click(function () {
         exprience.append("<br><input type='text' name='companyname' placeholder='Company Name'><br> <input type='text' name='descriptionexperience' class='descriptionexperience' placeholder='Description Experience'>");
     });
@@ -59,10 +62,16 @@
         project.append('<br><input type="text" name="projectname" placeholder="Project Name"><br> <input type="text" name="descriptionproject" placeholder="Description Project">');
     });
     $('#addEdu').click(function () {
-        education.append('<br><input type="text" name="projectname" placeholder="Project Name"><br><input type="text" name="descriptionproject" placeholder="Description Project">');
+        education.append('<br><input type="text" name="institutename" placeholder="Institute Name"><br><input type="text" name="edudesc" placeholder="Description">');
     });
     $('#addSkill').click(function () {
         skills.append('<br><input type="text" name="skill" placeholder="Sills">');
+    });
+    $('#addLang').click(function () {
+        lang.append('<br><input type="text" name="lang" placeholder="Languages Known">');
+    });
+    $('#addRes').click(function () {
+        resp.append('<br><input type="text" name="resp" placeholder="Responsiblities">');
     });
 
 </script>
